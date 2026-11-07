@@ -1,0 +1,8 @@
+name: tool-call-guardrail
+version: 0.1.0
+description: Guardrail for Hermes Agent tool calls — blocks destructive commands and secrets in arguments, asks you about risky writes, and keeps an audit log of every decision.
+author: Nadir Rafique
+provides_hooks:
+  - pre_tool_call
+  - post_tool_call
+requires_hermes: ">=0.19"

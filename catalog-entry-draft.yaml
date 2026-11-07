@@ -1,0 +1,21 @@
+# DRAFT — catalog entry for the Hermes plugin catalog.
+# Submitted later as a PR to NousResearch/hermes-agent, adding this file to
+# plugin-catalog/. The sha MUST be the exact 40-hex commit SHA of the
+# submitted plugin repo at PR time — fill it in then, never guess it.
+# The repo URL below uses the user's GitHub handle; confirm the repo name
+# when he creates it.
+name: tool-call-guardrail
+repo: https://github.com/devnadirrafique-hub/tool-call-guardrail
+sha: TODO-FILL-IN-EXACT-40-HEX-SHA-AT-PR-TIME
+description: Guardrail for Hermes Agent tool calls — blocks destructive commands and secrets, asks you about risky writes, logs every decision.
+maintainer: devnadirrafique
+tier: community
+category: tools
+requires_hermes: ">=0.19"
+version: "0.1.0"
+readme: true
+capabilities:
+  provides_tools: []
+  provides_hooks: [pre_tool_call, post_tool_call]
+  provides_middleware: []
+  requires_env: []
