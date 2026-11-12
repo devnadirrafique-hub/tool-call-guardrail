@@ -5,6 +5,16 @@ Every time the agent tries to call a tool, this plugin checks the call first
 and does one of three things: lets it through, blocks it with a reason, or
 sends it to you for approval. Every decision goes into an audit log.
 
+## Demo
+
+Watch the plugin in action (46 seconds):
+
+[tool-call-guardrail-demo.mp4](demo/tool-call-guardrail-demo.mp4)
+
+The terminal scenes are animated around the plugin's real outputs — `rm -rf /`
+blocked with its reason, a write to `/etc/passwd` sent for approval, `ls -la`
+allowed — captured fresh from `guardrail/policy.py`.
+
 ## What it checks
 
 - **Destructive shell commands — blocked.** Recursive force-deletes of the
@@ -104,3 +114,8 @@ hermes plugins validate . --install-deps
 `guardrail/policy.py` is pure Python with no Hermes dependency, so it can
 be tested on its own. Any error inside a check fails closed: the call is
 blocked rather than run unchecked.
+
+## Credits
+
+Built by Nadir Rafique with Muse, my AI agent — it drafted the code, I tested
+and verified every line.
